@@ -1,0 +1,13 @@
+<view class='CustomerService'>
+  <view class='listBox' data-id='{{item.UserId}}' data-CrId='{{item.CrId}}' wx:for="{{listData}}" wx:key="index" bindtap='Communicate'>
+    <image src='{{item.UserHeadPortraitUrl}}' class='portrait'></image>
+    <view class='CustomerServiceName'>{{item.UserNickName}}</view>
+    <view class='reddot'>
+      <text wx:if='{{item.UnreadCount>0}}'></text>
+    </view>
+    <view> {{item.showTime}}</view>
+  </view>
+</view>
+<view wx:if='{{hide==1}}' class='noData'>
+  暂时没有客户哦
+</view>
